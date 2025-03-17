@@ -28,7 +28,9 @@ function page() {
         
           <div className="h-[64vh] flex flex-col gap-3 mt-2 pr-2 overflow-y-auto">
           {[1, 2, 3, 4,5]?.map((item, i) => {
-            return <PropertyCard />;
+            return(<div key={i} className="w-full">
+               <PropertyCard item={item} />
+            </div>);
           })}
         </div>
         </div>
