@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import NavigationBar from "../../components/NavigationBar";
 import {
-  Sidebar,
   SidebarProvider,
   SidebarTrigger,
 } from "../../components/ui/sidebar";

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import home1 from "../../assets/crm-bg-home2.png"
+import home1 from "../../../assets/crm-bg-home2.png"
 
 function PropertyCard() {
   return (

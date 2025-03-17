@@ -6,13 +6,12 @@ import {
   SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { Calendar, Home, Search, Settings, User } from "lucide-react";
+import { Calendar, Home, Settings, User } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -49,6 +48,9 @@ const items = [
   },
 ];
 
+const listStyle =
+  "flex items-center gap-3 capitalize text-[#fff] text-[14px] p-2 rounded-md";
+  
 function AppSidebar() {
   const pathname = usePathname();
 
@@ -72,16 +74,19 @@ function AppSidebar() {
 
           <SidebarGroupContent>
             <SidebarMenu>
-              {items.map((item) => (
-                <SidebarMenuItem key={item.name}>
-                  <SidebarMenuButton asChild>
-                    <Link href={item.path}>
-                      <item.icon />
-                      <span className=" capitalize">{item.name}</span>
-                    </Link>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
+              {items.map((item) => {
+                const isActive = pathname === item.path;
+                return (
+                  <SidebarMenuItem key={`${item.name}-${item.path}`}>
+                    <SidebarMenuButton asChild>
+                      <Link href={item.path} className={`${listStyle} ${isActive && `bg-[#030303]`}`}>
+                        <item.icon />
+                        <span className=" capitalize">{item.name}</span>
+                      </Link>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                );
+              })}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

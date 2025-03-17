@@ -13,16 +13,16 @@ export default function Home() {
 // =============== hero
 const Hero = () => {
   return (
-    <div className="h-[100vh] w-full text-[40px] relative">
+    <div className="h-screen w-full text-[40px] relative">
       <Image
         src={homeBg}
         alt="App background"
         // width={500}
-        className="!h-[100%]"
+        className="!h-[100%] w-full object-cover"
         layout="responsive"
       />
 
-      <div className=" absolute top-0 left-0 right-0 bottom-0 bg-[#121212] bg-opacity-55"></div>
+      <div className=" absolute top-0 left-0 right-0 bottom-0 bg-[#121212] opacity-55"></div>
 
       {/*  */}
       <div className=" absolute top-0 left-[8%] right-0 bottom-0 flex flex-col justify-between ">
