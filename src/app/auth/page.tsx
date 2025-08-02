@@ -1,8 +1,8 @@
 import React from "react";
-import MainNavigation from "../../components/MainNavigation";
 import Image from "next/image";
 import Bg from "../../assets/texture-bg.png";
 import Bg2 from "../../assets/crm-bg-home2.png";
+import Link from "next/link";
 
 function page() {
   return (
@@ -19,12 +19,12 @@ function page() {
 
       {/*  */}
       <div className=" absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-between ">
-        <div className="pl-24">
-        <MainNavigation />
+        <div className="absolute top-5 left-24 ">
+          <Link href="/" className="text-orange-600 text-[24px] font-bold leading-tight">CR-CYCLE CRM</Link>
         </div>
 
         {/*  */}
-        <div className=" h-[85%] flex ml-24">
+        <div className=" h-[100%] flex ml-24">
           {/* ------ 1 */}
           <div className="flex-1 flex flex-col gap-5 justify-end">
             {/* <div className="">
@@ -45,9 +45,9 @@ function page() {
           </div>
 
           {/* ----- 2 */}
-          <div className=" flex-1  flex flex-col justify-between ">
+          <div className=" flex-1  flex flex-col justify-between pt-28 ">
             <div className="h-[70%] w-[70%] pl-10">
-              <h3 className=" text-orange-700 text-[15px] mb-3 font-semibold">LOG IN</h3>
+              <h3 className=" text-orange-600 text-[15px] font-semibold">LOG IN</h3>
               {/* <div className="h-full  border border-[#f5f5f550] rounded-md"></div> */}
             </div>
 
