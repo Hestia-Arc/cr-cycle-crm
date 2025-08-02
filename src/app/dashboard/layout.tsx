@@ -4,7 +4,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "../../components/ui/sidebar";
-import { quicksand } from "../../fonts/newFont";
+import { quicksand } from "../../../public/fonts/newFont";
 import AppSidebar from "@/components/app-sidebar";
 
 export const metadata: Metadata = {
