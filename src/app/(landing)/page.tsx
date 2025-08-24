@@ -1,50 +1,65 @@
-import Image from "next/image";
-import homeBg from "@/assets/crm-bg-home3.jpg";
+import { colors } from "assets/design-system/colors";
+import { typography } from "assets/design-system/typography";
+import { DMSans } from "../../../public/fonts/newFont";
 
 export default function Home() {
   return (
-<>
-    {/* // =========== hero section */}
-    <div className=" h-[600px] w-full text-[40px] relative">
-      <Image
-        src={homeBg}
-        alt="App background"
-        // width={500}
-        className="!h-[100%] w-full object-cover"
-        layout="responsive"
-      />
+    <div className="">
+      {/* hero */}
+      <div className="pt-28 pb-20">
+        <div className="flex flex-col items-center gap-[60px]">
+          <div className="flex flex-col gap-10 items-center">
+            <div className=" flex flex-col gap-4 items-center">
+              <div className="flex items-center gap-4 px-3 py-2 rounded-[20px] border shadow">
+                <div style={{color:colors.primary[600]}} className="text-2xl font-bold">++</div>
+                <p>Generative Business Intelligence for Real Estate Agents</p>
+              </div>
+              <h2
+                style={{
+                  ...typography.heading.h1,
+                  textAlign: "center",
+                  width: "80%",
+                }}
+                className={`${DMSans.className}`}
+              >
+                Revolutionizing Business Decisions with AI-Powered CRM
+              </h2>
+              <p className="text-center w-2/3">
+                Harnesses the power of artificial intelligence to transform your
+                business data into actionable insights, propelling you to new
+                heights of success.
+              </p>
+            </div>
 
-      {/* overlay */}
-      <div className=" absolute top-0 left-0 right-0 bottom-0 bg-[#121212] opacity-55"></div>
+            {/* btns */}
+            <div></div>
+          </div>
 
-      {/*  */}
-      <div className=" absolute top-0 left-[8%] right-0 bottom-0 pt-36 flex flex-col justify-between ">
-        {/*  */}
-        <div className="">
-          <h2 className="text-[#f2f2f2] font-bold leading-tight">
-            Comprehensive <br /> architectural solutions
-          </h2>
-          <p className="text-[18px] text-[#f3f3f3]">Quality</p>
-        </div>
-
-        {/*  */}
-        <div className="relative h-[90px] bg-[#121212] ">
-          <div className=" h-[200px] w-[240px] absolute top-[-80px] left-0 bg-orange-700"></div>
+          {/* screen */}
+          <div
+            className=" h-[480px] w-full rounded-3xl "
+            style={{ backgroundColor: colors.primary[600] }}
+          ></div>
         </div>
       </div>
+
+      {/*  */}
+      <div></div>
+
+      {/*  */}
+      <div></div>
+
+      {/*  */}
+      <div></div>
+
+      {/*  */}
+      <div></div>
+
+      {/*  */}
+      <div></div>
+
+      {/*  */}
+      <div></div>
     </div>
-
-
-{/* // ======== features */}
-<div className="h-[500px] px-20 py-14 bg-[#121212] flex justify-center ">
-  <h3 className="text-[#fff] text-[34px]">Features</h3>
-</div>
-</>
   );
 }
-
-// ===========
-
-// ==========
-
-// ========== footer
