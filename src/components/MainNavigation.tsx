@@ -1,7 +1,7 @@
 import { colors } from "assets/design-system/colors";
 import Link from "next/link";
 import React from "react";
-import { Button } from "./ui/button";
+import { CustomButton, CustomButtonOutlined } from "./custom-button";
 
 function MainNavigation() {
   return (
@@ -29,7 +29,7 @@ function MainNavigation() {
       <div className="py-4 flex items-center justify-between">
         <div className="flex items-center gap-10">
           <Link href="/" className=" text-[24px] font-bold">
-            CR-CYCLE CRM
+            CR-CYCLE
           </Link>
           <div
             style={{ color: colors.neutral[800] }}
@@ -46,19 +46,13 @@ function MainNavigation() {
 
         {/* btns */}
         <div className="flex items-center gap-2">
-          <Button
-            style={{
-              border: "1px solid",
-              borderColor: colors.primary[600],
-              color: colors.primary[600],
-              backgroundColor: "white",
-            }}
-          >
-            Demo
-          </Button>
-          <Button style={{ backgroundColor: colors.primary[600] }}>
-            <Link href="/dashboard">Start your free trial</Link>
-          </Button>
+          <CustomButtonOutlined>Demo</CustomButtonOutlined>
+          <CustomButton>
+            <Link
+            href=""
+            //  href="/dashboard"
+            >Get started for free </Link>
+          </CustomButton>
         </div>
       </div>
     </div>
