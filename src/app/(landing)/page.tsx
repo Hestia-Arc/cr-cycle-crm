@@ -18,8 +18,9 @@ export default function Home() {
                   style={{ color: colors.primary[600] }}
                   className="font-bold"
                 >
-                 <BsStars height={20} width={20} />
+                  <BsStars height={20} width={20} />
                 </div>
+                <h2>Hello world</h2>
                 <TextBody content="Generative Business Intelligence for Real Estate Agents" />
               </div>
               <TextHeading content="  Revolutionizing Business Decisions with AI-Powered CRM" />
@@ -32,7 +33,7 @@ export default function Home() {
             </div>
 
             {/* btns */}
-             <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4">
               <CustomButton>Get started for free</CustomButton>
               <CustomButtonOutlined>Watch demo</CustomButtonOutlined>
             </div>

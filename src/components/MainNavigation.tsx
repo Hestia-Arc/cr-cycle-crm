@@ -4,6 +4,8 @@ import React from "react";
 import { CustomButton, CustomButtonOutlined } from "./custom-button";
 
 function MainNavigation() {
+  const dx = () => {};
+
   return (
     <div
       className="h-[120px] z-[99999999] flex flex-col border-b-[1px]"
@@ -49,9 +51,11 @@ function MainNavigation() {
           <CustomButtonOutlined>Demo</CustomButtonOutlined>
           <CustomButton>
             <Link
-            href=""
-            //  href="/dashboard"
-            >Get started for free </Link>
+              href=""
+              //  href="/dashboard"
+            >
+              Get started for free{" "}
+            </Link>
           </CustomButton>
         </div>
       </div>
