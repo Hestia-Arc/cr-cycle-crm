@@ -40,12 +40,10 @@ function MainNavigation() {
             style={{ color: colors.neutral[800] }}
             className=" text-[17px] flex items-center font-medium gap-8"
           >
-            <Link href="/auth">Features</Link>
-            {/* <Link href="/about"></Link> */}
-            <Link href="/faq">Case Studies</Link>
+            <Link href="/features">Features</Link>
+            <Link href="/case-studies">Case Studies</Link>
             <Link href="/pricing">Pricing</Link>
             <Link href="/faq">FAQs</Link>
-            {/* <Link href="/dashboard">ADMIN</Link> */}
           </div>
         </div>
 
@@ -53,12 +51,7 @@ function MainNavigation() {
         <div className="flex items-center gap-2">
           <CustomButtonOutlined>Demo</CustomButtonOutlined>
           <CustomButton>
-            <Link
-              href=""
-              //  href="/dashboard"
-            >
-              Get started for free{" "}
-            </Link>
+            <Link href="/register">Get started for free </Link>
           </CustomButton>
         </div>
       </div>

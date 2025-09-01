@@ -23,7 +23,6 @@ export default function Home() {
                 >
                   <BsStars height={20} width={20} />
                 </div>
-                <h2>Hello world</h2>
                 <TextBody content="Generative Business Intelligence for Real Estate Agents" />
               </div>
               <TextHeading content="  Revolutionizing Business Decisions with AI-Powered CRM" />
