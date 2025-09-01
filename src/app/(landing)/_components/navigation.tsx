@@ -1,7 +1,10 @@
 import { colors } from "assets/design-system/colors";
 import Link from "next/link";
 import React from "react";
-import { CustomButton, CustomButtonOutlined } from "./custom-button";
+import {
+  CustomButton,
+  CustomButtonOutlined,
+} from "../../../components/button/custom-button";
 
 function MainNavigation() {
   const dx = () => {};

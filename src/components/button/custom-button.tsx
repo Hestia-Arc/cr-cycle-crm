@@ -1,5 +1,5 @@
 import { colors } from "assets/design-system/colors";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { ReactNode } from "react";
 
 interface IButtonProp {
@@ -10,7 +10,10 @@ interface IButtonProp {
 
 export const CustomButton = ({ children, className }: IButtonProp) => {
   return (
-    <Button className={className} style={{  backgroundColor: colors.primary[600] }}>
+    <Button
+      className={className}
+      style={{ backgroundColor: colors.primary[600] }}
+    >
       {children}{" "}
     </Button>
   );

@@ -1,10 +1,10 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Image from "next/image";
 import Bg from "../../assets/texture-bg.png";
 import Bg2 from "../../assets/crm-bg-home2.png";
 import Link from "next/link";
 
-function page() {
+function AuthLayoutComponent({ children }: { children: ReactNode }) {
   return (
     <div className="h-[100vh] w-full text-[40px] relative">
       <Image
@@ -14,13 +14,16 @@ function page() {
         className="!h-[100%]"
         layout="responsive"
       />
-
       {/* <div className=" absolute top-0 left-0 right-0 bottom-0 "></div> */}
-
       {/*  */}
       <div className=" absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-between ">
         <div className="absolute top-5 left-24 ">
-          <Link href="/" className="text-orange-600 text-[24px] font-bold leading-tight">CR-CYCLE CRM</Link>
+          <Link
+            href="/"
+            className="text-orange-600 text-[24px] font-bold leading-tight"
+          >
+            CR-CYCLE CRM
+          </Link>
         </div>
 
         {/*  */}
@@ -47,17 +50,20 @@ function page() {
           {/* ----- 2 */}
           <div className=" flex-1  flex flex-col justify-between pt-28 ">
             <div className="h-[70%] w-[70%] pl-10">
-              <h3 className=" text-orange-600 text-[15px] font-semibold">LOG IN</h3>
+              <h3 className=" text-orange-600 text-[15px] font-semibold">
+                LOG IN
+              </h3>
               {/* <div className="h-full  border border-[#f5f5f550] rounded-md"></div> */}
             </div>
 
             {/*  */}
-            <div className=" h-[120px] w-full bg-[#f3f3f3]"></div>
+            <div className=" h-[120px] w-full bg-[#f3f3f3]">{children}</div>
           </div>
         </div>
       </div>
+      a
     </div>
   );
 }
 
-export default page;
+export default AuthLayoutComponent;

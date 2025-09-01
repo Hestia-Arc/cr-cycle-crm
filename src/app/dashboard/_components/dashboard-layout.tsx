@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import AppSidebar from "@/components/app-sidebar";
-import NavigationBar from "@/components/NavigationBar";
+import AppSidebar from "app/dashboard/_components/app-sidebar";
+import NavigationBar from "app/dashboard/_components/navigation";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import React, { ReactNode } from "react";
 import { quicksand } from "../../../../public/fonts/newFont";
@@ -30,7 +30,7 @@ const Layout = ({ children }: LayoutProps) => {
   );
 };
 
-function DashboardLayout({ children }: LayoutProps) {
+function DashboardLayoutComponent({ children }: LayoutProps) {
   return (
     <Layout>
       <ErrorBoundary fallback={<div>Something went wrong!</div>}>
@@ -40,4 +40,4 @@ function DashboardLayout({ children }: LayoutProps) {
   );
 }
 
-export default DashboardLayout;
+export default DashboardLayoutComponent;

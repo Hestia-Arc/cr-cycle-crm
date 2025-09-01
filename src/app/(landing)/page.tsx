@@ -1,6 +1,9 @@
 import { colors } from "assets/design-system/colors";
-import { TextBody, TextHeading } from "@/components/text";
-import { CustomButton, CustomButtonOutlined } from "@/components/custom-button";
+import { TextBody, TextHeading } from "@/components/text/text";
+import {
+  CustomButton,
+  CustomButtonOutlined,
+} from "@/components/button/custom-button";
 import { TbServerCog } from "react-icons/tb";
 import { BsHddNetwork, BsStars } from "react-icons/bs";
 import { TbDeviceAnalytics } from "react-icons/tb";
