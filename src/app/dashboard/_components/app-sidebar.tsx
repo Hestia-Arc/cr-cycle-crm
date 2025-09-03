@@ -11,7 +11,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { Calendar, Home, Settings, User } from "lucide-react";
+import { Building, Home, Settings, User } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -22,25 +22,26 @@ const items = [
     icon: Home,
   },
   {
-    name: "properties",
-    path: "/dashboard/properties",
-    icon: Home,
-  },
-  {
     name: "leads",
     path: "/dashboard/leads",
-    icon: Home,
-  },
-  {
-    name: "contacts",
-    path: "/dashboard/contacts",
     icon: User,
   },
   {
-    name: "schedules",
-    path: "/dashboard/schedules",
-    icon: Calendar,
+    name: "properties",
+    path: "/dashboard/properties",
+    icon: Building,
   },
+
+  // {
+  //   name: "contacts",
+  //   path: "/dashboard/contacts",
+  //   icon: User,
+  // },
+  // {
+  //   name: "schedules",
+  //   path: "/dashboard/schedules",
+  //   icon: Calendar,
+  // },
   {
     name: "settings",
     path: "/dashboard/settings",
@@ -49,8 +50,8 @@ const items = [
 ];
 
 const listStyle =
-  "flex items-center gap-3 capitalize text-[#fff] text-[14px] p-2 rounded-md";
-  
+  "flex items-center gap-3 capitalize text-[#fff] text-[14px] p-2 rounded-xs";
+
 function AppSidebar() {
   const pathname = usePathname();
 
@@ -79,7 +80,10 @@ function AppSidebar() {
                 return (
                   <SidebarMenuItem key={`${item.name}-${item.path}`}>
                     <SidebarMenuButton asChild>
-                      <Link href={item.path} className={`${listStyle} ${isActive && `bg-[#030303]`}`}>
+                      <Link
+                        href={item.path}
+                        className={`${listStyle} ${isActive && `bg-[#f5f5f5] !text-[#6099f7] !font-medium`}`}
+                      >
                         <item.icon />
                         <span className=" capitalize">{item.name}</span>
                       </Link>

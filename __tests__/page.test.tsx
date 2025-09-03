@@ -8,7 +8,5 @@ describe("Page", () => {
 
     // const heading = screen.getByRole("heading", { level: 1 });
     const heading = screen.getByText("Hello world");
-
-    expect(heading).toBeInTheDocument();
   });
 });

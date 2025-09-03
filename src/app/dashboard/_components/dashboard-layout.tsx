@@ -14,7 +14,7 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div
-      className={`flex flex-col sm:flex-row h-screen p-1 gap-2 overflow-hidden  bg-stone-200  ${quicksand.className} antialiased`}
+      className={`flex flex-col sm:flex-row h-screen p-1 gap-2 overflow-hidden  bg-[#fff]  ${quicksand.className} antialiased`}
     >
       <SidebarProvider>
         <AppSidebar />
