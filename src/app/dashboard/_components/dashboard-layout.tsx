@@ -14,17 +14,17 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div
-      className={`flex flex-col sm:flex-row h-screen p-1 gap-2 overflow-hidden  bg-[#fff]  ${quicksand.className} antialiased`}
+      className={`flex flex-col sm:flex-row h-screen p-1 gap-1 overflow-hidden  bg-[#fff]  ${quicksand.className} antialiased`}
     >
       <SidebarProvider>
         <AppSidebar />
         <SidebarTrigger />
-        <main className=" flex-grow ">
+        <div className=" flex-grow ">
           <NavigationBar />
-          <div className=" h-[86vh] overflow-y-auto pr-1 rounded my-3">
+          <main className="h-[90vh] overflow-y-auto pr-1 rounded my-1">
             {children}
-          </div>
-        </main>
+          </main>
+        </div>
       </SidebarProvider>
     </div>
   );

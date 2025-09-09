@@ -63,10 +63,14 @@ function AppSidebar() {
     >
       <SidebarHeader>
         {/* <Avatar /> */}
-        <div className=" min-h-[120px] w-full flex flex-col items-center gap-2">
-          <div className="h-[100px] w-[100px] rounded-full bg-stone-500"></div>
-          <h3 className="text-[18px]">Faith Gates</h3>
-          <p className="text-[#7f7f7f] text-[12px]">Real Estate Developer</p>
+        <div className="h-[50px] w-full flex flex-col items-center gap-2">
+          <Link
+            href="../"
+            // style={{ color: colors.primary[600] }}
+            className="text-[18px] mr-auto"
+          >
+            CR-CYCLE
+          </Link>
         </div>
       </SidebarHeader>
       <SidebarContent>
