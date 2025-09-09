@@ -7,64 +7,52 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { colors } from "assets/design-system/colors";
 import { TextBody, TextHeading } from "@/components/text/text";
+import { quicksand } from "../../../../public/fonts/newFont";
 
 function AuthLayoutComponent({ children }: { children: ReactNode }) {
-  const router = useRouter();
   const pathname = usePathname();
-  const title = pathname === "/login" ? "Login" : "Register";
+  const title =
+    pathname === "/login" ? "Log into your account" : "Create an account";
+  const subTitle =
+    pathname === "/login" ? "Welcome back." : "Start exploring the features.";
 
   return (
-    <div className="h-[100vh] w-full text-[40px] bg-[#f3f3f3] relative">
-      <div className=" absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-between ">
-        <div className="absolute top-5 left-24 ">
+    <div
+      style={{
+        backgroundColor: colors.primary[600],
+      }}
+      className={`!${quicksand.className} h-[100vh] px-20 flex justify-end items-center w-full text-[40px] `}
+    >
+      <div className="h-[550px] w-fit flex  ">
+        <div className="flex-1 flex flex-col gap-4 pr-52 mt-32">
           <Link
             href="/"
-            style={{
-              color: colors.primary[600],
-            }}
-            className=" text-[24px] font-bold leading-tight"
+            className=" text-[16px] font-bold w-fit px-4 py-2 rounded bg-white"
           >
-            CR-CYCLE CRM
+            CR-CYCLE
           </Link>
+          <TextBody
+            className="!text-[36px] !font-bold !text-[#f4f4f4]"
+            content="Predictive Analytics For Your Workflow"
+          />
+          <TextBody
+            className="text-left text-[#f5f5f5]"
+            content="Harnesses the power of artificial intelligence to transform your
+                business data into actionable insights, propelling you to new
+                heights of success."
+          />
         </div>
-
-        {/*  */}
-        <div className=" h-[100%] flex ml-24">
-          {/* ------ 1 */}
-          <div className="flex-1 flex flex-col gap-5 justify-end">
-            {/* <div className="">
-              <h4 className="text-[#f2f2f2] text-[24px] font-bold leading-tight">
-                Comprehensive architectural solutions
-              </h4>
-            </div> */}
-            <div className=" h-[80%] w-full ">
-              {" "}
-              <Image
-                src={Bg2}
-                alt="App background"
-                // width={500}
-                className="!h-[100%]"
-                layout="responsive"
-              />
-            </div>
+        {/* form */}
+        <div className=" w-[580px] py-8 px-8 flex flex-col gap-8 bg-white rounded-md border-[1px] border-gray-300 shadow ">
+          <div>
+            <TextHeading content={title} className="!text-[24px] !text-left" />
+            <TextBody
+              content={subTitle}
+              className="!text-[15px] !text-[#8f8d8d] !text-left"
+            />
           </div>
 
-          {/* ----- 2 */}
-          <div className=" flex-1  flex flex-col justify-between pt-28 ">
-            <div className="h-[70%] w-[70%] pl-10">
-              <TextHeading
-                content={title}
-                className="!text-[24px] !text-left"
-              />
-
-              <div className=" h-[120px] w-full bg-[#f3f3f3]">{children}</div>
-
-              {/* <div className="h-full  border border-[#f5f5f550] rounded-md"></div> */}
-            </div>
-
-            {/*  */}
-            {/* <div className=" h-[120px] w-full bg-[#f3f3f3]">{children}</div> */}
-          </div>
+          <div>{children}</div>
         </div>
       </div>
     </div>
