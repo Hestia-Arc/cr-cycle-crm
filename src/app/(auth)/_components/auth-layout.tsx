@@ -1,8 +1,8 @@
 "use client";
 import React, { ReactNode } from "react";
 import Image from "next/image";
-import Bg from "../../../assets/texture-bg.png";
-import Bg2 from "../../../assets/crm-bg-home2.png";
+// import Bg from "../../../assets/texture-bg.png";
+import Bg2 from "../../../assets/crm-bg-home3.jpg";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { colors } from "assets/design-system/colors";
@@ -20,12 +20,34 @@ function AuthLayoutComponent({ children }: { children: ReactNode }) {
     <div
       style={{
         backgroundColor: colors.primary[600],
+        backgroundImage: `url(/crm-bg-home3.jpg)`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "top center",
       }}
-      className={`!${quicksand.className} h-[100vh] px-20 flex justify-end items-center w-full text-[40px] `}
+      className={`!${quicksand.className} relative h-screen pt-10 px-20 flex w-full text-[40px] overflow-hidden `}
     >
-      <div className="h-[550px] w-fit flex  ">
+      {/* Overlay */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          // background: "rgba(0,0,0,0.7)",
+          // rgba(56,127,245,0.9) 600
+          // rgba(34, 76, 147, 0.6) 800
+          background:
+            "linear-gradient(90deg, rgba(56,127,245,1), rgba(56,127,245,0.89), rgba(0,0,0,0.6), rgba(0,0,0,0.6))",
+          zIndex: 1,
+          pointerEvents: "none",
+        }}
+      />
+
+      <div className="h-[550px] w-fit flex z-[9999999] ">
         <div className="flex-1 flex flex-col gap-4 pr-52 mt-32">
           <Link
+            style={{
+              color: colors.primary[600],
+            }}
             href="/"
             className=" text-[16px] font-bold w-fit px-4 py-2 rounded bg-white"
           >

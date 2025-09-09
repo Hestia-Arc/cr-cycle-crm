@@ -15,19 +15,19 @@ const RootLayout = ({
   return (
     <html lang="en">
       <body
-        className={`${quicksand.className} antialiased`}
+        className={`${quicksand.className} antialiased min-w-[300px] max-w-[1500px] mx-auto`}
       >
         {children}
       </body>
     </html>
   );
-}
+};
 
-export default RootLayout
-
+export default RootLayout;
 
 // hierarchy
-{/* <Layout>
+{
+  /* <Layout>
   <Template>
     <ErrorBoundary fallback={<Error />}>
       <Suspense fallback={<Loading />}>
@@ -37,4 +37,5 @@ export default RootLayout
       </Suspense>
     </ErrorBoundary>
   </Template>
-</Layout> */}
+</Layout> */
+}

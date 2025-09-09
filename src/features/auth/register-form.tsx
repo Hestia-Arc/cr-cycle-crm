@@ -1,20 +1,80 @@
+"use client";
+
 import { CustomButton } from "@/components/button/custom-button";
 import { TextBody } from "@/components/text/text";
 import Link from "next/link";
-import React from "react";
-import { FormInput } from "@/components/inputs/form-input";
+import React, { useState } from "react";
+import {
+  FormInputEmail,
+  FormInputPassword,
+  FormInputText,
+} from "@/components/inputs/form-input";
+import { FormInput } from "lucide-react";
 
 function RegisterForm() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    confirmPassword: "",
+    password: "",
+  });
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleFormSubmit = (e: any) => {
+    e.preventDefault();
+  };
+
   return (
-    <form className="flex flex-col gap-3 text-[#757474] text-[13px]">
-      <div className="flex items-center gap-4 ">
-        <FormInput label="First name" /> <FormInput label="First name" />{" "}
+    <form
+      onSubmit={handleFormSubmit}
+      className="flex flex-col gap-3 text-[#757474] text-[13px]"
+    >
+      <div>
+        {formData.lastName} {formData.firstName} {formData.email}{" "}
+        {formData.password}
       </div>
-      <FormInput label="Email address" />{" "}
+      <div className="flex items-center gap-4 ">
+        <FormInputText
+          label="First name"
+          name="firstName"
+          value={formData.firstName}
+          onChange={onChange}
+        />{" "}
+        <FormInputText
+          label="First name"
+          name="lastName"
+          value={formData.lastName}
+          onChange={onChange}
+        />{" "}
+      </div>
+      <FormInputEmail
+        label="Email address"
+        name="email"
+        value={formData.email}
+        onChange={onChange}
+      />{" "}
       <div>
         <div className="flex items-center gap-4">
-          <FormInput label="Password" />{" "}
-          <FormInput label="Confirm your password" />{" "}
+          <FormInputPassword
+            label="Password"
+            name="password"
+            value={formData.password}
+            onChange={onChange}
+          />{" "}
+          <FormInputPassword
+            label="Confirm your password"
+            name="confirmPassword"
+            value={formData.confirmPassword}
+            onChange={onChange}
+          />{" "}
         </div>
         <p className="mt-3 text-[13px] text-[#757474]">
           Use 8 or more characters with a mix of letters, numbers & symbols
@@ -26,12 +86,7 @@ function RegisterForm() {
           <TextBody className="!text-[13px] " content="Log in instead" />
         </Link>
         <CustomButton className="!w-fit">
-          <Link href="/dashboard">
-            <TextBody
-              className="!text-[14px] !font-medium"
-              content="Register"
-            />
-          </Link>
+          <TextBody className="!text-[14px] !font-medium" content="Register" />
         </CustomButton>
       </div>
     </form>

@@ -1,19 +1,54 @@
+"use client";
+
 import {
   CustomButton,
   CustomButtonOutlined,
 } from "@/components/button/custom-button";
-import { FormInput } from "@/components/inputs/form-input";
+import {
+  FormInputEmail,
+  FormInputPassword,
+} from "@/components/inputs/form-input";
 import { TextBody } from "@/components/text/text";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 function LoginForm() {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleFormSubmit = (e: any) => {
+    e.preventDefault();
+  };
+
   return (
-    <form className="flex flex-col gap-3.5 text-[#757474] text-[13px]">
-      <FormInput label="Email address" />{" "}
+    <form
+      onSubmit={handleFormSubmit}
+      className="flex flex-col gap-3.5 text-[#757474] text-[13px]"
+    >
+      <FormInputEmail
+        label="Email address"
+        name="email"
+        value={formData.email}
+        onChange={onChange}
+      />{" "}
       <div>
         <div className="flex items-center gap-4">
-          <FormInput label="Password" />{" "}
+          <FormInputPassword
+            label="Password"
+            name="password"
+            value={formData.password}
+            onChange={onChange}
+          />{" "}
         </div>
         <p className="mt-2 text-right text-[13px] text-[#757474]">
           Forgot your password?
@@ -24,9 +59,7 @@ function LoginForm() {
           <TextBody className="!text-[13px] " content="Need help?" />
         </Link>
         <CustomButton className="!w-fit">
-          <Link href="/dashboard">
-            <TextBody className="!text-[14px] !font-medium" content="Log In" />
-          </Link>
+          <TextBody className="!text-[14px] !font-medium" content="Log In" />
         </CustomButton>
       </div>
       <div className=" border-t-[1px] mt-2 py-3 flex flex-col justify-center gap-3">
