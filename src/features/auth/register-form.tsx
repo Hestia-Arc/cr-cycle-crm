@@ -1,15 +1,15 @@
 "use client";
 
-import { CustomButton } from "@/components/button/custom-button";
-import { TextBody } from "@/components/text/text";
 import Link from "next/link";
 import React, { useState } from "react";
+
+import { CustomButton } from "@/components/button/custom-button";
 import {
   FormInputEmail,
   FormInputPassword,
   FormInputText,
 } from "@/components/inputs/form-input";
-import { FormInput } from "lucide-react";
+import { TextBody } from "@/components/text/text";
 
 function RegisterForm() {
   const [formData, setFormData] = useState({

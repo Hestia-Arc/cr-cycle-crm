@@ -1,5 +1,6 @@
-import RegisterForm from "features/auth/register-form";
 import React from "react";
+
+import RegisterForm from "features/auth/register-form";
 
 function page() {
   return <RegisterForm />;

@@ -1,12 +1,13 @@
-import { colors } from "assets/design-system/colors";
-import { TextBody, TextHeading } from "@/components/text/text";
+import { BsHddNetwork, BsStars } from "react-icons/bs";
+import { TbServerCog } from "react-icons/tb";
+import { TbDeviceAnalytics } from "react-icons/tb";
+
 import {
   CustomButton,
   CustomButtonOutlined,
 } from "@/components/button/custom-button";
-import { TbServerCog } from "react-icons/tb";
-import { BsHddNetwork, BsStars } from "react-icons/bs";
-import { TbDeviceAnalytics } from "react-icons/tb";
+import { TextBody, TextHeading } from "@/components/text/text";
+import { colors } from "assets/design-system/colors";
 
 export default function Home() {
   return (

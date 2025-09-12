@@ -1,4 +1,5 @@
 import React from "react";
+
 import PropertyCard from "./PropertyCard";
 
 function PropertyPage() {

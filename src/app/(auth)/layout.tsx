@@ -1,6 +1,7 @@
 import React, { ReactNode, Suspense } from "react";
-import AuthLayoutComponent from "./_components/auth-layout";
 import { ErrorBoundary } from "react-error-boundary";
+
+import AuthLayoutComponent from "./_components/auth-layout";
 
 function AuthLayout({ children }: { children: ReactNode }) {
   return (

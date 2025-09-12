@@ -1,5 +1,8 @@
 "use client";
 
+import Link from "next/link";
+import React, { useState } from "react";
+
 import {
   CustomButton,
   CustomButtonOutlined,
@@ -9,8 +12,6 @@ import {
   FormInputPassword,
 } from "@/components/inputs/form-input";
 import { TextBody } from "@/components/text/text";
-import Link from "next/link";
-import React, { useState } from "react";
 
 function LoginForm() {
   const [formData, setFormData] = useState({
@@ -64,7 +65,7 @@ function LoginForm() {
       </div>
       <div className=" border-t-[1px] mt-2 py-3 flex flex-col justify-center gap-3">
         <p className="mt-3 text-center text-[13px] text-[#757474]">
-          Don't have an account?
+          Don&#39;t have an account?
         </p>
         <CustomButtonOutlined className="!w-full">
           <Link href="/register">

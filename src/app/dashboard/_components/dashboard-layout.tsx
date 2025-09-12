@@ -1,11 +1,13 @@
 "use client";
 
+import React, { ReactNode } from "react";
+import { ErrorBoundary } from "react-error-boundary";
+
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import AppSidebar from "app/dashboard/_components/app-sidebar";
 import NavigationBar from "app/dashboard/_components/navigation";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import React, { ReactNode } from "react";
+
 import { quicksand } from "../../../../public/fonts/newFont";
-import { ErrorBoundary } from "react-error-boundary";
 
 type LayoutProps = {
   children: ReactNode;

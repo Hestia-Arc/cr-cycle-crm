@@ -1,5 +1,5 @@
 import React from "react";
-import CalenderCard from "./calender-card";
+
 import { TextHeading } from "@/components/text/text";
 
 function TasksCard() {

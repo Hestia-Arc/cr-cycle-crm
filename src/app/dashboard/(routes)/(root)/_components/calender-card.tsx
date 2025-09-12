@@ -1,4 +1,3 @@
-import { TextHeading } from "@/components/text/text";
 import React from "react";
 
 function CalenderCard() {

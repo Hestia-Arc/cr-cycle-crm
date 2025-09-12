@@ -1,6 +1,8 @@
 import React from "react";
-import { DMSans } from "../../../public/fonts/newFont";
+
 import { typography } from "assets/design-system/typography";
+
+import { DMSans } from "../../../public/fonts/newFont";
 
 interface IProp {
   content: string;

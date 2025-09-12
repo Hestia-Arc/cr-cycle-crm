@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
+
 import MainNavigation from "app/(landing)/_components/navigation";
+
 import Footer from "./_components/footer";
 
 interface LandingLayoutProps {

@@ -1,8 +1,9 @@
 import React from "react";
-import LeadScoringCard from "./_components/lead-scoring-card";
-import TasksCard from "./_components/tasks-card";
+
 import CalenderCard from "./_components/calender-card";
+import LeadScoringCard from "./_components/lead-scoring-card";
 import ReportsCard from "./_components/reports-card";
+import TasksCard from "./_components/tasks-card";
 
 function OverviewPage() {
   return (

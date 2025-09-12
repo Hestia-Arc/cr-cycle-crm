@@ -1,13 +1,15 @@
 "use client";
-import React, { ReactNode } from "react";
-import Image from "next/image";
+
 // import Bg from "../../../assets/texture-bg.png";
-import Bg2 from "../../../assets/crm-bg-home3.jpg";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { colors } from "assets/design-system/colors";
+import { usePathname } from "next/navigation";
+import React, { ReactNode } from "react";
+
 import { TextBody, TextHeading } from "@/components/text/text";
+import { colors } from "assets/design-system/colors";
+
 import { quicksand } from "../../../../public/fonts/newFont";
+// import Bg2 from "../../../assets/crm-bg-home3.jpg";
 
 function AuthLayoutComponent({ children }: { children: ReactNode }) {
   const pathname = usePathname();

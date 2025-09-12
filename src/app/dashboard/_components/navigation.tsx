@@ -1,7 +1,7 @@
-import { TextHeading } from "@/components/text/text";
-import { colors } from "assets/design-system/colors";
 import Link from "next/link";
 import React from "react";
+
+import { TextHeading } from "@/components/text/text";
 
 function NavigationBar() {
   return (

@@ -1,5 +1,6 @@
-import { TextHeading } from "@/components/text/text";
 import React from "react";
+
+import { TextHeading } from "@/components/text/text";
 
 function ReportsCard() {
   return (

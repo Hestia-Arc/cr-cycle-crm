@@ -1,6 +1,8 @@
-import { colors } from "assets/design-system/colors";
-import { Button } from "../ui/button";
 import { ReactNode } from "react";
+
+import { colors } from "assets/design-system/colors";
+
+import { Button } from "../ui/button";
 
 interface IButtonProp {
   children: ReactNode;

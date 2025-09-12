@@ -1,5 +1,9 @@
 "use client";
 
+import { Building, Home, Settings, User } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import {
   Sidebar,
   SidebarContent,
@@ -11,9 +15,6 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { Building, Home, Settings, User } from "lucide-react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 const items = [
   {
@@ -86,7 +87,10 @@ function AppSidebar() {
                     <SidebarMenuButton asChild>
                       <Link
                         href={item.path}
-                        className={`${listStyle} ${isActive && `bg-[#f5f5f5] !text-[#6099f7] !font-medium`}`}
+                        className={`${listStyle} ${
+                          isActive &&
+                          `bg-[#f5f5f5] !text-[#6099f7] !font-medium`
+                        }`}
                       >
                         <item.icon />
                         <span className=" capitalize">{item.name}</span>
