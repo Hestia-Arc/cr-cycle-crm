@@ -63,7 +63,7 @@ function LoginForm() {
           <TextBody className="!text-[14px] !font-medium" content="Log In" />
         </CustomButton>
       </div>
-      <div className=" border-t-[1px] mt-2 py-3 flex flex-col justify-center gap-3">
+      <div className="  border-t-[1px] mt-2 py-3 flex flex-col justify-center gap-3">
         <p className="mt-3 text-center text-[13px] text-[#757474]">
           Don&#39;t have an account?
         </p>
