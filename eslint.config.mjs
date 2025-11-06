@@ -32,32 +32,32 @@ const eslintConfig = [
     rules: {
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-unused-vars": "warn",
-      "import/order": [
-        "error",
-        {
-          groups: [
-            "builtin",
-            "external",
-            "internal",
-            ["parent", "sibling"],
-            "index",
-            "object",
-          ],
-          "newlines-between": "always",
-          pathGroups: [
-            {
-              pattern: "@src/app/**",
-              group: "external",
-              position: "after",
-            },
-          ],
-          pathGroupsExcludedImportTypes: ["builtin"],
-          alphabetize: {
-            order: "asc",
-            caseInsensitive: true,
-          },
-        },
-      ],
+      // "import/order": [
+      //   "error",
+      //   {
+      //     groups: [
+      //       "builtin",
+      //       "external",
+      //       "internal",
+      //       ["parent", "sibling"],
+      //       "index",
+      //       "object",
+      //     ],
+      //     "newlines-between": "always-and-inside-groups",
+      //     pathGroups: [
+      //       {
+      //         pattern: "@src/app/**",
+      //         group: "external",
+      //         position: "after",
+      //       },
+      //     ],
+      //     pathGroupsExcludedImportTypes: ["builtin"],
+      //     alphabetize: {
+      //       order: "asc",
+      //       caseInsensitive: true,
+      //     },
+      //   },
+      // ],
     },
   },
 ];
