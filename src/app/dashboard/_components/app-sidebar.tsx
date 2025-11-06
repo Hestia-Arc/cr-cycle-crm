@@ -1,9 +1,18 @@
 "use client";
 
-import { Building, Home, Settings, User } from "lucide-react";
+import {
+  BarChart3,
+  Contact,
+  Home,
+  Settings,
+  Zap,
+  CheckSquare,
+  DollarSign,
+} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Sidebar,
   SidebarContent,
@@ -16,100 +25,86 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
-const items = [
+const menuItems = [
   {
-    name: "Overview",
-    path: "/dashboard",
+    title: "Dashboard",
+    url: "/dashboard",
     icon: Home,
   },
   {
-    name: "leads",
-    path: "/dashboard/leads",
-    icon: User,
+    title: "Deals",
+    url: "/dashboard/deals",
+    icon: DollarSign,
   },
   {
-    name: "properties",
-    path: "/dashboard/properties",
-    icon: Building,
+    title: "Contacts",
+    url: "/dashboard/contacts",
+    icon: Contact,
   },
-
-  // {
-  //   name: "contacts",
-  //   path: "/dashboard/contacts",
-  //   icon: User,
-  // },
-  // {
-  //   name: "schedules",
-  //   path: "/dashboard/schedules",
-  //   icon: Calendar,
-  // },
   {
-    name: "settings",
-    path: "/dashboard/settings",
+    title: "Tasks",
+    url: "/dashboard/tasks",
+    icon: CheckSquare,
+  },
+  {
+    title: "Integrations",
+    url: "/dashboard/integrations",
+    icon: Zap,
+  },
+  {
+    title: "Settings",
+    url: "/dashboard/settings",
     icon: Settings,
   },
 ];
 
-const listStyle =
-  "flex items-center gap-3 capitalize text-[#fff] text-[14px] p-2 rounded-xs";
-
-function AppSidebar() {
+export function AppSidebar() {
   const pathname = usePathname();
 
   return (
-    <Sidebar
-      side="left"
-      collapsible="icon"
-      className=" rounded-[10px] text-[#fff]"
-    >
-      <SidebarHeader>
-        {/* <Avatar /> */}
-        <div className="h-[50px] w-full flex flex-col items-center gap-2">
-          <Link
-            href="../"
-            // style={{ color: colors.primary[600] }}
-            className="text-[18px] mr-auto"
-          >
-            CR-CYCLE
-          </Link>
+    <Sidebar className="border-r">
+      <SidebarHeader className="p-6">
+        <div className="flex items-center gap-2">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+            <BarChart3 className="h-4 w-4" />
+          </div>
+          <span className="text-lg font-semibold">Sales CRM</span>
         </div>
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-          {/* <SidebarGroupLabel>Navigation</SidebarGroupLabel> */}
-
           <SidebarGroupContent>
             <SidebarMenu>
-              {items.map((item) => {
-                const isActive = pathname === item.path;
-                return (
-                  <SidebarMenuItem key={`${item.name}-${item.path}`}>
-                    <SidebarMenuButton asChild>
-                      <Link
-                        href={item.path}
-                        className={`${listStyle} ${
-                          isActive &&
-                          `bg-[#f5f5f5] !text-[#6099f7] !font-medium`
-                        }`}
-                      >
-                        <item.icon />
-                        <span className=" capitalize">{item.name}</span>
-                      </Link>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                );
-              })}
+              {menuItems.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton asChild isActive={pathname === item.url}>
+                    <Link href={item.url}>
+                      <item.icon className="h-4 w-4" />
+                      <span>{item.title}</span>
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter>
-        <SidebarMenu>
-          <SidebarMenuItem></SidebarMenuItem>
-        </SidebarMenu>
+      <SidebarFooter className="p-4">
+        <div className="flex items-center gap-3">
+          <Avatar className="h-8 w-8">
+            <AvatarImage
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+              alt="John Doe"
+              className="object-cover"
+            />
+            <AvatarFallback>JD</AvatarFallback>
+          </Avatar>
+          <div className="flex flex-col">
+            <span className="text-sm font-medium">John Doe</span>
+            <span className="text-xs text-muted-foreground">Sales Manager</span>
+          </div>
+        </div>
       </SidebarFooter>
     </Sidebar>
   );
 }
-
-export default AppSidebar;

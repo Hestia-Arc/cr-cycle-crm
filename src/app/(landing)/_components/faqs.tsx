@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-function page() {
+function Faqs() {
   const [faq, setFaq] = useState([
     {
       question: "How to create an account?",
@@ -118,4 +118,4 @@ function page() {
   );
 }
 
-export default page;
+export default Faqs;

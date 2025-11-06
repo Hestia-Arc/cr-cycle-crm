@@ -4,9 +4,10 @@ import React, { ReactNode } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import AppSidebar from "app/dashboard/_components/app-sidebar";
+// import AppSidebar from "app/dashboard/_components/app-sidebar";
 import NavigationBar from "app/dashboard/_components/navigation";
 
+import { AppSidebar } from "./app-sidebar";
 import { quicksand } from "../../../../public/fonts/newFont";
 
 type LayoutProps = {
