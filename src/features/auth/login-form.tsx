@@ -59,9 +59,12 @@ function LoginForm() {
         <Link href="#" className=" underline font-medium">
           <TextBody className="!text-[13px] " content="Need help?" />
         </Link>
-        <CustomButton className="!w-fit">
-          <TextBody className="!text-[14px] !font-medium" content="Log In" />
-        </CustomButton>
+
+        <Link href="/dashboard">
+          <CustomButton className="!w-fit">
+            <TextBody className="!text-[14px] !font-medium" content="Log In" />
+          </CustomButton>
+        </Link>
       </div>
       <div className="  border-t-[1px] mt-2 py-3 flex flex-col justify-center gap-3">
         <p className="mt-3 text-center text-[13px] text-[#757474]">
