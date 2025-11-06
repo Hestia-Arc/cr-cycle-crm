@@ -30,7 +30,7 @@ function Faqs() {
     },
   ]);
 
-  const toggleFaq = (index) => {
+  const toggleFaq = (index: any) => {
     setFaq(
       faq.map((item, i) => {
         if (i === index) {
