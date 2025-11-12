@@ -10,10 +10,12 @@ interface LandingLayoutProps {
 
 export default function LandingLayout({ children }: LandingLayoutProps) {
   return (
-    <div className=" relative px-32 mx-auto sm:max-w-xl md:max-w-full">
+    <>
       <MainNavigation />
-      <main className="">{children}</main>
+      <div className="flex min-h-[calc(100dvh-64px)] flex-col">
+        <main className="flex-1">{children}</main>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }

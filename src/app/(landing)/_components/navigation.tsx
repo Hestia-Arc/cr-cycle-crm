@@ -7,13 +7,17 @@ import {
   CustomButton,
   CustomButtonOutlined,
 } from "../../../components/button/custom-button";
+import { headerData } from "@/shared/global-data";
 
 function MainNavigation() {
+  const { isSticky } = headerData;
   // const dx = () => {};
 
   return (
     <div
-      className="h-[120px] z-[99999999] flex flex-col border-b-[1px]"
+      className={`h-[120px] ${
+        isSticky ? "sticky" : "relative"
+      } top-0 backdrop-blur-md z-[99999999] flex flex-col border-b-[1px]`}
       style={{ borderColor: colors.neutral[300] }}
     >
       <div
